@@ -1,0 +1,11 @@
+Invoice #{{ .Number }}
+---------------------------
+
+Item name - Unitary price - Quantity - Total price
+---------------------------
+{{- range .Items }}
+{{ .Name }} -  ${{ .Price }} - {{ .Quantity }} - ${{ .TotalPrice -}}
+{{ end }}
+
+---------------------------
+Total Value   {{ .TotalPrice }}
